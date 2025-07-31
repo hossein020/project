@@ -1,20 +1,16 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { useState } from 'react'
 import './App.css'
-import Home from './pages/home/Home'
-import About from './pages/about/About'
-import Blog from './pages/blog/Bolg'
-import Course from './pages/cours/Cours'
+import Component1 from './components/Component1'
+
 function App() {
+const [name , setName] = useState('hossein')
+    
     return (
         <>
-            <BrowserRouter>
-                <Routes>
-                    <Route path='/' element= { <Home />} />
-                    <Route path='/about' element= { <About /> } />
-                    <Route path='/blog' element= { <Blog />} />
-                    <Route path='/cours' element= { <Course />} />
-                </Routes>
-            </BrowserRouter>
+        <h1>app Component</h1>
+        <p>hello {name}</p>
+        <hr />
+        <Component1 />
         </>
     )
 }
